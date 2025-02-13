@@ -6,15 +6,14 @@ import { Button, TextField, Box, Typography, Paper } from '@mui/material'
 
 export default function ChatBox() {
 
-    //const chatUrl = 'https://default-blackbird-matts-organization-8e557-0.blackbird-relay.a8r.io/ai-chatbot-api-mock/chat';
-    const chatUrl = 'http://localhost:3001/chat';
+    const chatUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 
     const [data, setData] = useState({ response: "", timestamp: "" })
     const [chat, setChat] = useState("What's the weather like in Colorado?")
     const [isLoading, setLoading] = useState(false)
 
     const submitChatMessage = () => {
-        fetch(chatUrl, {
+        fetch(`${chatUrl}/chat`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
