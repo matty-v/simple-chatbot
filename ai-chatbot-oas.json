@@ -134,11 +134,18 @@
             "type": "string",
             "description": "A message providing additional information about the health status.",
             "example": "The service is running smoothly."
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp when the health check was performed.",
+            "example": "2023-10-01T12:00:00Z"
           }
         },
         "required": [
           "status",
-          "message"
+          "message",
+          "timestamp"
         ],
         "additionalProperties": false
       }
