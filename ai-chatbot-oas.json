@@ -5,7 +5,7 @@
     "description": "API for interacting with an AI-powered chatbot. This API allows users to send messages to the chatbot and receive responses. It also includes a health check endpoint to ensure the service is operational.",
     "version": "1.0.0",
     "contact": {
-      "name": "Support Team",
+      "name": "Matt Voget",
       "url": "https://support.example.com",
       "email": "support@example.com"
     }
