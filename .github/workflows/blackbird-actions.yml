@@ -5,12 +5,12 @@ jobs:
   Blackbird-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Update Blackbird APIs and Mocks
-        uses: actions/checkout@v4
         env:
           BLACKBIRD_TOKEN: ${{ secrets.BLACKBIRD_TOKEN }}
           TEST: ${{ secrets.TEST }}
-      - run: |
+        run: |
           echo $BLACKBIRD_TOKEN
           echo $TEST
           sudo mkdir -p /usr/local/bin
