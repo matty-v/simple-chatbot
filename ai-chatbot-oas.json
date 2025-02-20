@@ -104,6 +104,11 @@
       "MessageResponse": {
         "type": "object",
         "properties": {
+          "user": {
+            "type": "string",
+            "description": "The current user",
+            "example": "Matt"
+          },
           "response": {
             "type": "string",
             "description": "The response from the chatbot.",
@@ -117,6 +122,7 @@
           }
         },
         "required": [
+          "user",
           "response",
           "timestamp"
         ],
